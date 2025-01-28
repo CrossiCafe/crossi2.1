@@ -1,0 +1,23 @@
+footer {
+  min-height: 85px;
+  background-color:var(--rusty-red);
+  width: 100%;
+}
+
+footer img.social {
+  width: 30px; 
+  height: auto;
+  @media screen and (max-width: 1024px) {
+    width: 35px; 
+  } 
+}
+
+.social-tiktok{
+  padding: 0px 2.5px;
+}
+
+
+
+.social-linkedin{
+  padding: 0px 2.7px;
+}

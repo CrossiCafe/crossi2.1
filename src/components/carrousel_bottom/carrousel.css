@@ -1,0 +1,15 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--dark-brown); /* Código hexadecimal del color dark brown */
+}
+
+/* Cambiar color de los puntos */
+.swiper-pagination-bullet {
+  background-color: var(--dark-brown); /* Color inicial */
+  opacity: 0.6; /* Transparencia inicial */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--dark-brown); /* Color activo */
+  opacity: 1; /* Sin transparencia */
+}

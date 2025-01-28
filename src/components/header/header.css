@@ -1,0 +1,15 @@
+nav.desktopHeader {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  padding: 20px 0px;
+}
+
+.menuDrawer{
+  background-image: url('/background/bg_default.png');
+  height: 100vh;
+}
+
+.LogoHeaderDrawer{
+  filter: invert(100%);
+  margin:40px 10px 20px 0px;
+}
+
