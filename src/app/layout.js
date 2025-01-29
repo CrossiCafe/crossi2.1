@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Croissant Café',
@@ -69,6 +70,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Header/>
         {children}
         <Footer/>
