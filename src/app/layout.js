@@ -57,7 +57,25 @@ export const metadata = {
     'crossifans', 
     'crossi mar del plata', 
     'crossi cafe',
-    'franquisias croissant'],
+    'franquisias croissant',
+    'medialunas mar del plata',  
+    'catering eventos',  
+    'cafe en la costa atlantica',  
+    'cafe con medialuna',  
+    'coffee break mar del plata',  
+    'regalos empresariales',  
+    'mesa dulce mar del plata',  
+    'cafe por guemes',  
+    'cafe por constitucion',  
+    'las medialunas mas ricas de mar del plata',  
+    'cafe de especialidad en mar del plata',  
+    'pasteleria mar del plata',  
+    'eventos mar del plata',  
+    'venta mayorista medialunas',  
+    'panificados',  
+    'venta mayorista de croissant',  
+    'brunch mar del plata',  
+    'menu ejecutivo mar del plata'  ],
   robots: 'index, follow', 
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#d4a373',
@@ -73,6 +91,7 @@ export default function RootLayout({ children }) {
         <Head>
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        <div className='h-[96px] bg-darkBrown sm:hidden'></div>
         <Header/>
         {children}
         <Footer/>
