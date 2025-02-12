@@ -69,7 +69,6 @@ export default function CarrouselTop() {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         loop={true}
@@ -77,12 +76,12 @@ export default function CarrouselTop() {
         {
           banners.map((banner, index)=>(
             <SwiperSlide key={index} className={"flex justify-center items-center"}>
-              <div className={twMerge("flex flex-col md:flex-row justify-center items-center max-w-[1000px] mx-2 md:mx-auto rounded-xl my-2 p-2", `bg-${banner.bgColor}`)}>
+              <div className={twMerge("flex flex-col md:flex-row justify-center items-center max-w-[1000px] mx-2 md:mx-auto rounded-xl my-2 p-2 ", `!bg-${banner.bgColor ?? 'primary'}`)}>
                 <div className='rounded-xl !w-full md:!w-1/2 overflow-hidden'>
                   <Image src={banner.img} alt={banner.alt} width={612} height={441}  className="!w-full" />
                 </div>
                 <div className='flex flex-col justify-start items-start gap-6 py-4 px-8 !w-full md:!w-1/2 min-h-[350px] sm:min-h-[250px] md:min-h-[335px] lg:min-h-auto'>
-                    <h3 className={twMerge('font-anton uppercase text-3xl sm:text-4xl md:text-5xl mt-3',`  text-${banner.titleColor}`)}>
+                    <h3 className={twMerge('font-anton uppercase text-3xl sm:text-4xl md:text-5xl mt-3',`  text-${banner.bgColor ? banner.titleColor : 'white'}`)}>
                         {banner.title}
                     </h3>
                     <p className="font-courier text-white">

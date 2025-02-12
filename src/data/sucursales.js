@@ -6,7 +6,8 @@ export const sucursales = [
       address: "Av. Constitución 4399",
       time: ["Lunes a domingos de 8am a 21pm"],
       contact: "2235033700",
-      pedidos: "https://www.pedidosya.com.ar/restaurantes/mar-del-plata/croissant-cafe-constitucion-menu?search=croissant"
+      pedidos: "https://www.pedidosya.com.ar/restaurantes/mar-del-plata/croissant-cafe-constitucion-menu?search=croissant",
+      wappText:"Hola%20Team%20Crossi,%20necesito%20hacerles%20una%20consulta...",
     },
     {
       name: "guemes",
@@ -15,7 +16,8 @@ export const sucursales = [
       address: "Güemes 2978",
       time: ["Lunes a viernes de 8am a 22pm", "Sabados y domingos de 6:15am a 23pm"],
       contact: "2233407367",
-      pedidos: "https://www.pedidosya.com.ar/restaurantes/mar-del-plata/croissant-cafe-guemes-menu"
+      pedidos: "https://www.pedidosya.com.ar/restaurantes/mar-del-plata/croissant-cafe-guemes-menu",
+      wappText:"Hola%20Team%20Crossi,%20necesito%20hacerles%20una%20consulta...",
     },
     {
       name: "cordoba",
@@ -24,6 +26,7 @@ export const sucursales = [
       address: "Córdoba 2361",
       time:["Lunes a domingos de 8am a 20pm"],
       contact: "2235033732",
-      pedidos: "https://www.pedidosya.com.ar/restaurantes/mar-del-plata/croissant-cafe---cordoba-menu"
+      pedidos: "https://www.pedidosya.com.ar/restaurantes/mar-del-plata/croissant-cafe---cordoba-menu",
+      wappText:"Hola%20Team%20Crossi,%20necesito%20hacerles%20una%20consulta...",
     },
   ];

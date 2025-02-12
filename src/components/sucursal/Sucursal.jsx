@@ -14,7 +14,7 @@ export const Sucursal = ({ item }) => {
                 {item.time.map((time, index) => (
                     <p key={index}>{time}</p>
                 ))}
-                <WhatsApp number={item.contact} className='w-[22px] h-[22xpx] my-1'/>
+                <WhatsApp number={item.contact} classNameImg='w-[22px] h-[22xpx] my-1' defaultText={item.wappText}/>
                 <Link href={item.pedidos} target='_blank' className='flex items-center gap-2 my-1'>
                     <Image src='/sucursales/pedidosya.png' alt='PedidosYa' width={20} height={20} className='w-[22px] h-[22xpx]'/>
                     PedidosYa
