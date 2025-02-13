@@ -1,6 +1,6 @@
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--dark-brown); /* Código hexadecimal del color dark brown */
+  color: var(--darkBrown); /* Código hexadecimal del color dark brown */
 }
 @media (max-width: 768px) {
   .swiper-button-next,
@@ -11,12 +11,12 @@
 
 /* Cambiar color de los puntos */
 .swiper-pagination-bullet {
-  background-color: var(--dark-brown); /* Color inicial */
+  background-color: var(--darkBrown); /* Color inicial */
   box-shadow: 0px 4px 4px 0px rgba(251, 251, 251, 0.5);
   opacity: 0.6; /* Transparencia inicial */
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--dark-brown); /* Color activo */
+  background-color: var(--darkBrown); /* Color activo */
   opacity: 1; /* Sin transparencia */
 }

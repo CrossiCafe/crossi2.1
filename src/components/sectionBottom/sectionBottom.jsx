@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import WhatsApp from '@/components/whatsapp/whatsapp';
 
-
 const consultas =[
     {
         src:"/sectionBottom/cumple.png",
@@ -50,7 +49,9 @@ export const SectionBottom = () => {
             </div>
             <div className='flex flex-col lg:flex-row justify-center lg:justify-between max-w-[1100px] lg:w-full'>
                 {consultas.map((consulta, index) => (
-                    <div key={index} className={`bg-${consulta.bgColor} m-2 mt-32 rounded-2xl p-6 pt-40 max-w-[300px] lg:mx-auto flex flex-col items-center justify-center lg:justify-between gap-3 lg:gap-6 relative`}>
+                    <div key={index}
+                    style={{ backgroundColor: `var(--${consulta.bgColor})` }}
+                    className={` m-2 mt-32 rounded-2xl p-6 pt-40 max-w-[300px] lg:mx-auto flex flex-col items-center justify-center lg:justify-between gap-3 lg:gap-6 relative`}>
                         <Image src={consulta.src} alt={consulta.title} width={252} height={252} className="!max-w-[230px] h-auto absolute top-[-95px]"  />
                         <h4 className='font-anton uppercase text-white text-center text-2xl lg:text-3xl xl:text-4xl '>
                             {consulta.title}

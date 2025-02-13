@@ -11,8 +11,6 @@ import 'swiper/css/a11y';
 import './carrousel.css';
 import Image from "next/image";
 import { twMerge } from 'tailwind-merge';
-import clsx from 'clsx';
-
 
 export default function CarrouselTop() {
   const banners=[
@@ -76,7 +74,9 @@ export default function CarrouselTop() {
         {
           banners.map((banner, index)=>(
             <SwiperSlide key={index} className={"flex justify-center items-center"}>
-              <div className={twMerge("flex flex-col md:flex-row justify-center items-center max-w-[1000px] mx-2 md:mx-auto rounded-xl my-2 p-2 ", `!bg-${banner.bgColor ?? 'primary'}`)}>
+              <div
+              style={{ backgroundColor: `var(--${banner.bgColor})` }}
+                className={"flex flex-col md:flex-row justify-center items-center max-w-[1000px] mx-2 md:mx-auto rounded-xl my-2 p-2 "}>
                 <div className='rounded-xl !w-full md:!w-1/2 overflow-hidden'>
                   <Image src={banner.img} alt={banner.alt} width={612} height={441}  className="!w-full" />
                 </div>

@@ -123,7 +123,7 @@ export default function FormContact() {
                 </FormControl>
               )}
             />
-            <Typography variant="caption" color="red">
+            <Typography variant="caption" className="!text-red-400 !drop-shadow-sm">
               <ErrorMessage errors={errors} name="reason" />
             </Typography>
             <Box className="nameBox"> 
@@ -136,7 +136,7 @@ export default function FormContact() {
                   defaultValue=""
                   aria_describedby="outlined-day-helper-text"
                 />
-                <Typography variant="caption" color="red">
+                <Typography variant="caption" className="!text-red-400 !drop-shadow-sm">
                   <ErrorMessage errors={errors} name="name" />
                 </Typography>
               </Box>
@@ -150,7 +150,7 @@ export default function FormContact() {
                   aria_describedby="outlined-day-helper-text"
                   
                 />
-                <Typography variant="caption" color="red">
+                <Typography variant="caption" className="!text-red-400 !drop-shadow-sm">
                   <ErrorMessage errors={errors} name="lastName" />
                 </Typography>
               </Box>
@@ -163,7 +163,7 @@ export default function FormContact() {
               defaultValue=""
               aria_describedby="outlined-day-helper-text"
             />
-            <Typography variant="caption" color="red">
+            <Typography variant="caption" className="!text-red-400 !drop-shadow-sm">
               <ErrorMessage errors={errors} name="email" />
             </Typography>
             <CustomTextField
@@ -174,7 +174,7 @@ export default function FormContact() {
               defaultValue=""
               aria_describedby="outlined-day-helper-text"
             />
-            <Typography variant="caption" color="red">
+            <Typography variant="caption" className="!text-red-400 !drop-shadow-sm">
               <ErrorMessage errors={errors} name="phone" />
             </Typography>
             {
@@ -262,7 +262,7 @@ export default function FormContact() {
                 />
               )}
             />
-            <Typography variant="caption" color="red" className="recaptchaError">
+            <Typography variant="caption" className="!text-red-400 !drop-shadow-sm recaptchaError">
               <ErrorMessage errors={errors} name="recaptcha" />
             </Typography>
 

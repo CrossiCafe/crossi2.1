@@ -8,7 +8,7 @@
 }
 .contactDiv{
   width: 100%;
-  background-color: var(--third-color);
+  background-color: var(--primary);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius:12px;
   padding:40px 30px;
@@ -19,9 +19,7 @@
   position: relative;
   z-index: 2;
 }
-.contactDiv h1{
-  color: var( --third-button)
-}
+
 .sobreImg{
   position: absolute;
   z-index: 3;
@@ -115,11 +113,11 @@ button.btnEnvio{
 }
 
 .textHelper{
-  color:var(--primary-color);
+  color:var(--darkBrown);
 }
 .textareaMessage{
   margin-top: 16px;
-  color: var(--third-button);
+  color: var(--darkBrown);
   font-size: 1rem;
   border-radius: 4px;
   border:none;
@@ -143,7 +141,7 @@ button.btnEnvio{
 -moz-box-shadow: 0px -1px 0px 0px rgba(81, 34, 0) inset;
 }
 .textareaMessage::placeholder{
-  color: var(--third-button);
+  color: var(--darkBrown);
   opacity: 0.5;
 }
 
