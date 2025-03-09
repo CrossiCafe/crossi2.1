@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
 import Head from 'next/head';
+import Script from "next/script";
 
 export const metadata = {
   title: 'Croissant Café',
@@ -91,6 +92,13 @@ export default function RootLayout({ children }) {
         <Head>
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        {/* Métricool */}
+        <Script id="metricool" strategy="afterInteractive">
+          {`function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}
+          loadScript(function(){
+            beTracker.t({hash:"bd2713b53b423865476c61e6b4762b92"})
+          });`}
+        </Script>
         <div className='h-[96px] bg-darkBrown sm:hidden'></div>
         <Header/>
         {children}
