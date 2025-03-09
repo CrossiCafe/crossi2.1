@@ -14,7 +14,7 @@ import Swal from "sweetalert2";
 
 
 export default function FormContact() {
-  const reasons = [ 'Eventos', 'Trabajar con Nosotros', 'Otros']
+  const reasons = [ 'Trabajar con Nosotros', 'Otros']
   const areas = [ 'Cocina', 'Marketing', 'Otros']
 
   const [recaptchaValue, setRecaptchaValue] = React.useState('');
@@ -32,7 +32,8 @@ export default function FormContact() {
     trigger,
     reset
   } = useFormContext();
-
+  
+  console.log("🚀 ~ FormContact ~ errors:", errors)
 
   function onChangeReason(event) {
     setReason(event.target.value);
@@ -102,7 +103,7 @@ export default function FormContact() {
               defaultValue=""
               render={({ field }) => (
                 <FormControl fullWidth variant="filled" sx={{ mt: "10px", mx:"auto" }} className={"width70"}>
-                  <InputLabel id="simple-select-label">Motivo</InputLabel>
+                  <InputLabel id="simple-select-label" required>Motivo</InputLabel>
                   <Select
                     labelId="simple-select-label"
                     id="simple-select"
@@ -132,6 +133,7 @@ export default function FormContact() {
                   name="name"
                   label="Nombre"
                   type="text"
+                  required
                   control={control}
                   defaultValue=""
                   aria_describedby="outlined-day-helper-text"
@@ -144,6 +146,7 @@ export default function FormContact() {
                 <CustomTextField
                   name="lastName"
                   label="Apellido"
+                  required
                   type="text"
                   control={control}
                   defaultValue=""
@@ -168,7 +171,7 @@ export default function FormContact() {
             </Typography>
             <CustomTextField
               name="phone"
-              label="Telefono"
+              label="Teléfono"
               type="text"
               control={control}
               defaultValue=""
@@ -177,47 +180,48 @@ export default function FormContact() {
             <Typography variant="caption" className="!text-red-400 !drop-shadow-sm">
               <ErrorMessage errors={errors} name="phone" />
             </Typography>
+            <Typography variant="caption" className="!text-red-400 !drop-shadow-sm">
+              <ErrorMessage errors={errors} name="require-phone-or-email" />
+            </Typography>
             {
               reason === "Trabajar con Nosotros" &&
-              <Controller
-              name="areaToWork"
-              control={control}
-              defaultValue=""
-              render={({ field }) => (
-                <FormControl fullWidth variant="filled" sx={{ mt: "10px", mx:"auto"}} >
-                  <InputLabel id="area-select-label">Areas a aplicar</InputLabel>
-                  <Select
-                    labelId="area-select-label"
-                    id="area-select"
-                    value={area}
-                    label="Areas a aplicar"
-                    onChange={onChangeArea}
-                    onBlur={(e) => {
-                      field.onChange(e);
-                      trigger("areaToWork");
-                    }}
-                  >
-                    {
-                      areas.map((item)=>(
-                        <MenuItem key={item} value={item}>{item}</MenuItem>
-                      ))
-                    }
-                  </Select>
-                </FormControl>
-              )}
-            />
-            }
-
-            {
-              reason === "Trabajar con Nosotros" &&
-              <CustomTextField
-                name="file"
-                label="Adjunta Link de tu CV"
-                type="text"
-                control={control}
-                defaultValue=""
-                aria_describedby="outlined-day-helper-text"
-              />
+              <>
+                <Controller
+                  name="areaToWork"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <FormControl fullWidth variant="filled" sx={{ mt: "10px", mx:"auto"}} >
+                      <InputLabel id="area-select-label">Areas a aplicar</InputLabel>
+                      <Select
+                        labelId="area-select-label"
+                        id="area-select"
+                        value={area}
+                        label="Areas a aplicar"
+                        onChange={onChangeArea}
+                        onBlur={(e) => {
+                          field.onChange(e);
+                          trigger("areaToWork");
+                        }}
+                      >
+                        {
+                          areas.map((item)=>(
+                            <MenuItem key={item} value={item}>{item}</MenuItem>
+                          ))
+                        }
+                      </Select>
+                    </FormControl>
+                  )}
+                />
+                <CustomTextField
+                  name="file"
+                  label="Adjunta Link de tu CV"
+                  type="text"
+                  control={control}
+                  defaultValue=""
+                  aria_describedby="outlined-day-helper-text"
+                />
+              </>
             }
             <Controller
               name="message"
@@ -262,21 +266,22 @@ export default function FormContact() {
                 />
               )}
             />
-            <Typography variant="caption" className="!text-red-400 !drop-shadow-sm recaptchaError">
+            <Typography variant="caption" className="!text-red-400 !drop-shadow-sm">
               <ErrorMessage errors={errors} name="recaptcha" />
             </Typography>
+            
 
             {isSubmitting ? (
             <ButtonComponent
               disabled
-              className="btnEnvio"
+              className="btnEnvio mt-8"
             >
               Enviando...
             </ButtonComponent>
           ) : (
             <ButtonComponent
               type="submit"
-              className="btnEnvio"
+              className="btnEnvio mt-8"
             >
               Enviar
             </ButtonComponent>

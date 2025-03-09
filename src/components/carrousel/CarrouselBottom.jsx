@@ -54,10 +54,10 @@ export default function CarrouselBottom() {
                 Almorzá en CROSSI!
             </h4>
           </div>
-            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'>INCLUYE: Plato, Café y Limonada, Pomelada o Agua</p>
-          <div className='flex items-center justify-between'>
-            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'>DÍAS: Lunes a Viernes</p>
-            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'>HORARIO: 11hs a 15hs</p>
+          <div className='flex flex-col items-center justify-center gap-2'>
+            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>INCLUYE:</span> Plato, Café y Limonada, Pomelada o Agua</p>
+            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>DÍAS:</span> Lunes a Viernes</p>
+            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>HORARIO:</span> 11hs a 15hs</p>
           </div>
 
         </div>
@@ -70,6 +70,7 @@ export default function CarrouselBottom() {
         pagination={{ clickable: true }}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
+        loop={true}
       >
         {
           banners.map((banner, index)=>(

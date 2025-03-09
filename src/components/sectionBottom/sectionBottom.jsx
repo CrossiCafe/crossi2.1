@@ -37,7 +37,7 @@ const consultas =[
 
 export const SectionBottom = () => {
     return (
-        <div className="flex flex-col justify-center items-center gap-4 max-w-[1000px] mx-auto my-10 md:my-20">
+        <div className="flex flex-col justify-center items-center gap-4 max-w-[1100px] mx-auto my-10 md:my-20">
             <div className='flex flex-col md:flex-row justify-center items-center gap-2 '>
                 <Image src="/sectionBottom/vasos.png" alt="Vasos Recargables" width={608.4} height={441.14} className="max-w-[350px] md:max-w-inherit md:!w-1/2 h-auto order-2 md:order-1"  />
                 <div className='flex flex-col items-center justify-center gap-4 p-4 order-1 md:order-2 md:w-1/2'>
@@ -51,7 +51,7 @@ export const SectionBottom = () => {
                 {consultas.map((consulta, index) => (
                     <div key={index}
                     style={{ backgroundColor: `var(--${consulta.bgColor})` }}
-                    className={` m-2 mt-32 rounded-2xl p-6 pt-40 max-w-[300px] lg:mx-auto flex flex-col items-center justify-center lg:justify-between gap-3 lg:gap-6 relative`}>
+                    className={` m-2 mt-32 rounded-2xl p-6 pt-40 max-w-[300px] xl:max-w-[320px] lg:mx-auto flex flex-col items-center justify-center lg:justify-between gap-3 lg:gap-6 relative`}>
                         <Image src={consulta.src} alt={consulta.title} width={252} height={252} className="!max-w-[230px] h-auto absolute top-[-95px]"  />
                         <h4 className='font-anton uppercase text-white text-center text-2xl lg:text-3xl xl:text-4xl '>
                             {consulta.title}
@@ -59,7 +59,8 @@ export const SectionBottom = () => {
                         <p className={`font-courier text-white text-center font-normal  text-base md:text-md lg:text-lg xl:text-xl lg:mb-auto`}>{consulta.description}</p>
                         <WhatsApp 
                             number={consulta.number} 
-                            classNameBox={`font-courier text-white text-center bg-${consulta.buttonColor} p-2 px-5 rounded-xl text-md md:text-lg lg:text-xl xl:text-2xl `} 
+                            classNameBox={`font-courier text-white text-center  p-2 px-5 rounded-xl text-md md:text-lg lg:text-xl xl:text-2xl `} 
+                            stylesBox={{backgroundColor: `var(--${consulta.buttonColor})`}}
                             classNameImg={`hidden`} 
                             text={consulta.buttonText} 
                             defaultText={consulta.wappText}

@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 
 
 
-export default function WhatsApp({ number, classNameBox, classNameImg, text , defaultText}) {
+export default function WhatsApp({ number, classNameBox, stylesBox , classNameImg, text , defaultText}) {
     const [whatsapp, setWhatsapp] = React.useState('');
 
     React.useEffect(() => {
@@ -15,7 +15,7 @@ export default function WhatsApp({ number, classNameBox, classNameImg, text , de
             setWhatsapp(`wa.me/${number}?`);
         } else {
             setWhatsapp(
-                `web.whatsapp.com/send?phone=${number}&`,
+                `api.whatsapp.com/send?phone=${number}&`,
             );
         }
     }, [number]);
@@ -25,6 +25,7 @@ export default function WhatsApp({ number, classNameBox, classNameImg, text , de
         href={`https://${whatsapp}text=${defaultText}`}
         target='_blank'
         className={twMerge('flex items-center gap-2', classNameBox)}
+        style={ stylesBox }
         >
             <Image src={WhatsAppImg} width={'35px'} height={'35px'} alt='WhatsApp' className={classNameImg}/>
             {text ?? number}

@@ -17,12 +17,12 @@ export const contactSchema = yup.object({
     .max(15, "Máximo 15 caracteres"),
   email: yup
     .string()
-    .required("Este campo es obligatorio")
+    .notRequired()
     .email("El correo no es válido"),
   phone: yup
     .string()
-    .required("Este campo es obligatorio")
-    .matches(/^[0-9]{10,}$/, "El número debe incluir el código de area, pero no el prefijo."),
+    .notRequired()
+    .matches(/^$|^[0-9]{10,}$/, "El número debe incluir el código de área, pero no el prefijo."),
   file: yup
     .string()
     .notRequired(),
@@ -43,7 +43,18 @@ export const contactSchema = yup.object({
       return false;
     })
     .required('Por favor acepta el reCAPTCHA'), // Definimos que el campo es requerido
-  })
+  }).test(
+    "require-phone-or-email",
+    "Por favor ingresa al menos un método de contacto (email o teléfono).",
+    function (value) {
+      const { phone, email } = value;
+      if (!(phone || email)) {
+        // Le indicamos que el error se asocie a "require-phone-or-email"
+        return this.createError({ path: "require-phone-or-email" });
+      }
+      return true;
+    }
+  );
 
 
   

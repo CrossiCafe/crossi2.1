@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 export const FormContainer = () => {
     const method = useForm({
         resolver: yupResolver(contactSchema),
-        defaultValues: {},
+        defaultValues: { email:"", phone:""},
       });
     return (
         <FormProvider {...method}>

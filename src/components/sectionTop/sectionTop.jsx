@@ -38,16 +38,16 @@ export const SectionTop = () => {
             </h2> 
 
 
-            <div className="pt-6 pb-4 flex flex-col sm:flex-row items-center justify-center max-w-[1000px] mx-auto gap-3">
-                <div className="flex flex-col items-center justify-center max-w-[280px] ">
+            <div className="pt-6 pb-4 flex flex-col sm:flex-row items-center justify-center max-w-[1000px] mx-auto gap-3 xl:gap-20">
+                <div className="flex flex-col items-center justify-center max-w-[280px] xl:max-w-[300px]">
                     <Image src="/home/corazon.png" alt="Estampa de Corazón" width={215} height={245} className="!max-w-[150px] h-auto"  />
-                    <h5 className='font-josefin text-center uppercase font-bold text-2xl xl:text-3xl 2xl:text-4xl   text-oliveGreen '>
+                    <h5 className='font-josefin text-center uppercase font-bold text-2xl xl:text-3xl  text-oliveGreen '>
                         SOMOS RICOS Y ABUNDANTES
                     </h5>
                 </div>
-                <div className="flex flex-col items-center justify-center max-w-[280px]  ">
+                <div className="flex flex-col items-center justify-center max-w-[280px] xl:max-w-[300px]">
                     <Image src="/home/camera.png" alt="Estampa de Camara de Fotos" width={215} height={245} className="!max-w-[160px] h-auto my-1"  />
-                    <h5 className='font-josefin text-center uppercase font-bold text-2xl xl:text-3xl 2xl:text-4xl   text-oliveGreen '>
+                    <h5 className='font-josefin text-center uppercase font-bold text-2xl xl:text-3xl   text-oliveGreen '>
                         Y MUY INSTAGRAMEABLES
                     </h5>
                 </div>
