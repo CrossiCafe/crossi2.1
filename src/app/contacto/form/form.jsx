@@ -274,14 +274,14 @@ export default function FormContact() {
             {isSubmitting ? (
             <ButtonComponent
               disabled
-              className="btnEnvio mt-8"
+              className="btnEnvio !mt-8"
             >
               Enviando...
             </ButtonComponent>
           ) : (
             <ButtonComponent
               type="submit"
-              className="btnEnvio mt-8"
+              className="btnEnvio !mt-8"
             >
               Enviar
             </ButtonComponent>
