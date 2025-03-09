@@ -54,7 +54,7 @@ export default function CarrouselBottom() {
                 Almorzá en CROSSI!
             </h4>
           </div>
-          <div className='flex flex-col items-center justify-center gap-2'>
+          <div className='flex flex-col items-center justify-center gap-2 px-2'>
             <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>INCLUYE:</span> Plato, Café y Limonada, Pomelada o Agua</p>
             <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>DÍAS:</span> Lunes a Viernes</p>
             <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>HORARIO:</span> 11hs a 15hs</p>
