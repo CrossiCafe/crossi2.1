@@ -34,8 +34,8 @@ const navItems = [
   },
   {
     name: 'Franquicias',
-    route: '/docs/franquicias.pdf',
-    descargable:true
+    route: '/franquicias',
+    descargable:false
   }, 
   {
     name:'Contacto',
