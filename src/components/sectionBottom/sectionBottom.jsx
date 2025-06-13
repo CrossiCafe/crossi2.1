@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import WhatsApp from '@/components/whatsapp/whatsapp';
+import Link from 'next/link';
+
 
 const consultas =[
     {
@@ -28,10 +30,9 @@ const consultas =[
         title:"REGALÁ CROSSI",
         description:"Regalá o hacete un mimo a vos mismo, con nuestro merch!",
         buttonText:"Pedí el catálogo",
-        number:"2235033700",
         bgColor:"rustyRed",
         buttonColor:"sandGold",
-        wappText:"Hola%20Team%20Crossi%2C%0A%0AEstoy%20interesada%20en..."
+        url: "https://drive.google.com/file/d/1sE_0rlXfKlFgfJWfAmr-mDdgGVfuHQ_9/view"
     }
 ]
 
@@ -39,7 +40,7 @@ export const SectionBottom = () => {
     return (
         <div className="flex flex-col justify-center items-center gap-4 max-w-[1100px] mx-auto my-10 md:my-20">
             <div className='flex flex-col md:flex-row justify-center items-center gap-2 '>
-                <Image src="/sectionBottom/vasos.png" alt="Vasos Recargables" width={608.4} height={441.14} className="max-w-[350px] md:max-w-inherit md:!w-1/2 h-auto order-2 md:order-1"  />
+                <Image src="/sectionBottom/vasos.png" alt="Vasos Recargables" width={608.4} height={441.14} className="max-w-[300px] sm:max-w-[350px] md:max-w-inherit md:!w-1/2 h-auto order-2 md:order-1"  />
                 <div className='flex flex-col items-center justify-center gap-4 p-4 order-1 md:order-2 md:w-1/2'>
                     <h2 className="text-center uppercase font-josefin font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary">
                         RECARGATE
@@ -57,6 +58,7 @@ export const SectionBottom = () => {
                             {consulta.title}
                         </h4>
                         <p className={`font-courier text-white text-center font-normal  text-base md:text-md lg:text-lg xl:text-xl lg:mb-auto`}>{consulta.description}</p>
+                        {  consulta.number &&
                         <WhatsApp 
                             number={consulta.number} 
                             classNameBox={`font-courier text-white text-center  p-2 px-5 rounded-xl text-md md:text-lg lg:text-xl xl:text-2xl `} 
@@ -65,6 +67,11 @@ export const SectionBottom = () => {
                             text={consulta.buttonText} 
                             defaultText={consulta.wappText}
                         />
+                        }
+                        {consulta.url && 
+                            <Link href={consulta.url} key={consulta.buttonText}  target={"_blank" } className={`font-courier text-white text-center  p-2 px-5 rounded-xl text-md md:text-lg lg:text-xl xl:text-2xl `} 
+                            style={{backgroundColor: `var(--${consulta.buttonColor})`}}>{consulta.buttonText}</Link>
+                        }
                     </div>
                 ))}
             </div>

@@ -11,6 +11,7 @@ import 'swiper/css/a11y';
 import './carrousel.css';
 import Link from 'next/link';
 import Image from "next/image";
+import Crossi from "/public/franquicias/logo-croissant-brown.svg";
 const banners=[
   {
     link:"https://drive.google.com/file/d/1WbD02UCoqIgfjZT2cwwXWjwBCgcKnT7a/view?usp=sharing",
@@ -47,21 +48,31 @@ export default function CarrouselBottom() {
   
 
     return (
+
       <div className="max-w-[1100px] mx-auto">
-        <div className='flex flex-col items-center justify-center gap-4 mb-6 md:hidden'>
-          <div className=' bg-primary m-4 mt-8 rounded-xl px-8 pb-4 pt-5 max-w-[1000px] lg:mx-auto flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6'>
-            <h4 className='font-bold uppercase text-white text-center text-xl lg:text-2xl xl:text-3xl '>
-                Almorzá en CROSSI!
+      {isMobile ?
+        (<div className='flex flex-col items-center justify-center gap-4 mb-6 md:hidden'>
+          <div className=' m-4 mt-8  max-w-[1000px] lg:mx-auto flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6'>
+            <h4 className='font-bold font-josefin text-rustyRed text-center text-3xl lg:text-4xl xl:text-3xl '>
+                Almorzá en
             </h4>
+            <Image 
+              src={Crossi}
+              width={299}
+              height={35.98}
+              alt="Croissant"
+              className='mb-2 sm:mb-3 w-2/4 '
+                />
           </div>
-          <div className='flex flex-col items-center justify-center gap-2 px-2'>
+          <div className='flex flex-col items-center justify-center gap-2 px-3'>
             <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>INCLUYE:</span> Plato, Café y Limonada, Pomelada o Agua</p>
             <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>DÍAS:</span> Lunes a Viernes</p>
             <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>HORARIO:</span> 11hs a 15hs</p>
           </div>
 
         </div>
-        <Swiper
+        ):
+        (<Swiper
         className=""
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
@@ -72,17 +83,18 @@ export default function CarrouselBottom() {
         onSwiper={(swiper) => console.log(swiper)}
         loop={true}
       >
-        {
-          banners.map((banner, index)=>(
+        
+          {banners.map((banner, index)=>(
             <SwiperSlide key={index} className="flex justify-center items-center">
               <Link href={banner.link} target="_blank">
-                <Image src={isMobile ? banner.imgMobile : banner.imgDesktop} alt={banner.alt}
+                <Image src={ banner.imgDesktop} alt={banner.alt}
                 width={300} height={300}  className="w-full" />
               </Link>
             </SwiperSlide>
-          ))
-        }
-      </Swiper>
+          ))}
+          </Swiper>)
+      }
       </div>
+
     );
 }
