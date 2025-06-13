@@ -23,6 +23,11 @@ import { Container, Slide } from '@mui/material';
 const drawerWidth = 260;
 const navItems = [
   {
+    name:'Home',
+    route:'/',
+    descargable:false
+  },
+  {
     name:'Menú',
     route:'https://drive.google.com/file/d/1WbD02UCoqIgfjZT2cwwXWjwBCgcKnT7a/view?usp=drive_link',
     descargable:true
@@ -35,6 +40,11 @@ const navItems = [
   {
     name: 'Franquicias',
     route: '/franquicias',
+    descargable:false
+  }, 
+  {
+    name: 'Mayorista',
+    route: '/mayorista',
     descargable:false
   }, 
   {

@@ -1,0 +1,21 @@
+.custom-ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .custom-ul li {
+    position: relative;
+    padding-left: 32px; /* Dejá espacio para el ícono */
+  }
+  
+  .custom-ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 20px;
+    height: 20px;
+    background-image: url('/check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }

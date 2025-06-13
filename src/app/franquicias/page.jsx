@@ -12,7 +12,7 @@ const FranquiciasPage = () => {
             <BannerHeader img={"/franquicias/franquicias-banner.svg"} title={"Franquicias"} text={" TU OPORTUNIDAD DE BRILLAR CON"} textImg={'/franquicias/logo-croissant-brown.svg'} classNameText={'sm:bottom-[-120px] lg:bottom-[-170px]'}/>
             
             <div className='w-full flex flex-col items-center justify-center gap-10 mb-20 sm:mt-40 xl:mt-60'>
-                <h2 className='font-josefin font-bold text-primary drop-shadow-[0px_6px_6px_rgba(0,0,0,0.3)] text-4xl sm:text-5xl xl:text-6xl uppercase mt-10'>Franquicias</h2>
+                <h2 className='font-josefin font-bold text-primary drop-shadow-[0px_6px_6px_rgba(0,0,0,0.3)] text-4xl sm:text-5xl xl:text-6xl uppercase mt-10 text-center'>Franquicias</h2>
                 <h5 className="font-courier text-rustyRed font-semibold text-xl sm:text-2xl xl:text-4xl text-center px-5 md:px-10 max-w-[1000px]">Al unirte a nuestra franquicia, te convertis en parte de esta familia apasionada. Te ofrecemos un modelo probado, respaldo continuo y la posibilidad de compartir la magia de CROSSI con tu comunidad.</h5>
                 <div className="flex flex-col sm:flex-row sm:gap-5">
                     <ul className="custom-ul">
