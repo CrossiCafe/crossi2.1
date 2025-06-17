@@ -65,9 +65,13 @@ export default function CarrouselBottom() {
                 />
           </div>
           <div className='flex flex-col items-center justify-center gap-2 px-3'>
-            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>INCLUYE:</span> Plato, Café y Limonada, Pomelada o Agua</p>
-            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>DÍAS:</span> Lunes a Viernes</p>
-            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-rustyRed max-w-[850px] mx-auto'><span className='font-semibold'>HORARIO:</span> 11hs a 15hs</p>
+            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary max-w-[850px] mx-auto'><span className='font-semibold'>MENÚ EJECUTIVO</span> </p>
+            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary max-w-[850px] mx-auto px-3'><span className='font-semibold'>INCLUYE:</span> Plato, Café y Limonada, Pomelada o Agua</p>
+            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary max-w-[850px] mx-auto'><span className='font-semibold'>DÍAS:</span> Lunes a Viernes</p>
+            <p className='font-josefin text-center font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary max-w-[850px] mx-auto'><span className='font-semibold'>HORARIO:</span> 11hs a 15hs</p>
+            <Link href="https://drive.google.com/file/d/1N9TqTifh9I9juTbQOKfsovTs8e00c9YF/view" target="_blank" className='bg-primary text-white font-josefin font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl px-4 py-2 rounded-md hover:bg-rustyRed transition-colors duration-300'>
+            Mira las opciones aca! 
+            </Link>
           </div>
 
         </div>
